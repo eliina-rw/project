@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <div class="search">🔍 Hinted search text</div>
+            <div class="logo">
+                <div class="logo-text">POP MARKET</div> 
+            </div>
+            <div class="avatar">👤</div>
+        </div>
+    </header>
+    <main>
+        <h1>Добро пожаловать!</h1>
+        <p>Пройдите регистрацию</p>
+        <form action="/register" method="post" class="form-box">
+            <input type="text" name="first_name" placeholder="Имя" required>
+            <input type="text" name="last_name" placeholder="Фамилия" required>
+            <input type="email" name="email" placeholder="Электронная почта" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button type="submit">Регистрация</button>
+        </form>
+    </main>
+</body>
+</html>

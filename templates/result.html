@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Игрушки по вашему стилю</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <div class="search">🔍 Поиск</div>
+            <div class="logo-text">POP MART</div>
+            <div class="avatar">👤</div>
+        </div>
+    </header>
+    <main class="toys-container">
+        <h1>Игрушки по вашему стилю</h1>
+        <div class="toys-grid">
+            <!-- Игрушка 1 -->
+            <div class="toy-card">
+                <img src="/static/toys/toy1.jpg" alt="Игрушка 1">
+                <div class="toy-info">
+                    <h3>Мишка POP</h3>
+                    <p class="price">1,299 ₽</p>
+                    <div class="toy-actions">
+                        <button class="favorite-btn">❤️</button>
+                        <button class="cart-btn">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Игрушка 2 -->
+            <div class="toy-card">
+                <img src="/static/toys/toy2.jpg" alt="Игрушка 2">
+                <div class="toy-info">
+                    <h3>Кролик MART</h3>
+                    <p class="price">1,599 ₽</p>
+                    <div class="toy-actions">
+                        <button class="favorite-btn">❤️</button>
+                        <button class="cart-btn">В корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="toy-card">
+                <img src="/static/toys/1000.jpg" alt="Игрушка 2">
+                <div class="toy-info">
+                    <h3>Фигурка SPY</h3>
+                    <p class="price">1,599 ₽</p>
+                    <div class="toy-actions">
+                        <button class="favorite-btn">❤️</button>
+                        <button class="cart-btn">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toy-card">
+                <img src="/static/toys/1001.jpg" alt="Игрушка 2">
+                <div class="toy-info">
+                    <h3>Подвеска APT</h3>
+                    <p class="price">1,599 ₽</p>
+                    <div class="toy-actions">
+                        <button class="favorite-btn">❤️</button>
+                        <button class="cart-btn">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toy-card">
+                <img src="/static/toys/1002.jpg" alt="Игрушка 2">
+                <div class="toy-info">
+                    <h3>Подвеска SONIC</h3>
+                    <p class="price">1,599 ₽</p>
+                    <div class="toy-actions">
+                        <button class="favorite-btn">❤️</button>
+                        <button class="cart-btn">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toy-card">
+                <img src="/static/toys/1003.jpg" alt="Игрушка 2">
+                <div class="toy-info">
+                    <h3>Стикеры DIO</h3>
+                    <p class="price">1,599 ₽</p>
+                    <div class="toy-actions">
+                        <button class="favorite-btn">❤️</button>
+                        <button class="cart-btn">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toy-card">
+                <img src="/static/toys/1004.jpg" alt="Игрушка 2">
+                <div class="toy-info">
+                    <h3>Кролик ALEN</h3>
+                    <p class="price">1,599 ₽</p>
+                    <div class="toy-actions">
+                        <button class="favorite-btn">❤️</button>
+                        <button class="cart-btn">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toy-card">
+                <img src="/static/toys/1005.jpg" alt="Игрушка 2">
+                <div class="toy-info">
+                    <h3>Подвеска DELON</h3>
+                    <p class="price">1,599 ₽</p>
+                    <div class="toy-actions">
+                        <button class="favorite-btn">❤️</button>
+                        <button class="cart-btn">В корзину</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Добавьте остальные игрушки по аналогии -->
+        </div>
+        
+        <!-- Корзина -->
+        <div class="cart-container" id="cartContainer" style="display: none;">
+            <div class="cart-icon">
+                <img src="/static/cart-icon.png" alt="Корзина">
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('.cart-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Увеличиваем счетчик
+                const countElement = document.querySelector('.cart-count');
+                let count = parseInt(countElement.textContent) + 1;
+                countElement.textContent = count;
+                
+                // Показываем корзину
+                document.getElementById('cartContainer').style.display = 'block';
+                
+                // Анимация добавления
+                this.textContent = 'Добавлено!';
+                setTimeout(() => {
+                    this.textContent = 'В корзину';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
